@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="flex-col content-center">
+      <div className="flex-col content-center bg-sky-800">
         
         <h1 className="text-5xl" ><ul>To Do List</ul></h1>
         <TskAdd addTask={addTask} />
