@@ -16,11 +16,11 @@ function TskAdd({ addTask }) {
       <div class="p-2">
       <b >ADD TASKS :</b>
       </div>
-      <div class="p-2">
+      <div className="border-2 border-black">
       <input type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new Tasks" />
       </div>
       <div class="p-2">
-    <button  variant="outline-dark " onClick={addbutton}>
+    <button className="border-2 border-black" onClick={addbutton}>
       ADD
     </button>
     </div>
