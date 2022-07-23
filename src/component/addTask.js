@@ -13,12 +13,12 @@ function TskAdd({ addTask }) {
     
     <div className="">
     <div className="">
-      <div class="flex p-3 text-3xl justify-center">
+      <div class="p-3 text-3xl">
       <b >ADD TASKS</b>
       </div>
-      <div className="flex justify-center ">
-      <input type="text" className="rounded-lg px-6 border-2 border-neutral-900 p-1" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new Tasks" />
-    <button className="rounded-lg mx-3 px-3 border-2 border-black " onClick={addbutton}>
+      <div className="">
+      <input type="text" className="rounded-lg px-6 border-2 border-neutral-900 p-2" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new Tasks" />
+    <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ml-2" onClick={addbutton}>
       ADD
     </button>
     </div>
