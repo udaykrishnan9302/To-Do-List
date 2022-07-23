@@ -22,21 +22,24 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="flex-col content-center bg-sky-800">
-        
-        <h1 className="text-5xl" ><ul>To Do List</ul></h1>
+    <div className="flex justify-center p-3">
+      <div className="">
+        <h1 className="text-5xl p-4 ml-8" >To Do List</h1>
         <TskAdd addTask={addTask} />
-        
-        <div className="border-2 border-black ">
-        {tasks.map((todo, index) => (
-          <Todo key={index} index={index} todo={todo} delTask={delTask} />
-        ))}
-        </div>
-  
+       {tasks.length===1 ?
+       <div className="p-4">
+       {tasks.map((todo, index) => (
+         <Todo key={index} index={index} todo={todo} delTask={delTask} />
+       ))}
+       </div>
+       :
+       <div className="border-2 border-black mr-3 mt-3">
+       {tasks.map((todo, index) => (
+         <Todo key={index} index={index} todo={todo} delTask={delTask} />
+       ))}
+       </div>
+      }
       </div>
-      
-      
     </div>
   );
 }

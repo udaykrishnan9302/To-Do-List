@@ -1,18 +1,15 @@
 import React from "react";
 function Todo({ todo, index, delTask }) {
   return (
-    <div>
-      {todo.data !="" ? <div>
- 
-        <span>{todo.data}</span>
-
-   
-        <button variant="outline-secondary" onClick={() => delTask(index)}>
-        🗑
-        </button>
+    <div className="p-1">
+      {todo.data !=="" ? <div className="flex px-2">
+        <div className="">
+          <span className="">{todo.data}</span>
+        </div>
+        <div className="ml-auto">
+         <button className="" onClick={() => delTask(index)}>🗑</button>
+        </div>
       </div> : <></>}
-      
-      
     </div>
   );
 }

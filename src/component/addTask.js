@@ -11,16 +11,14 @@ function TskAdd({ addTask }) {
 
   return (
     
-    <div className="container">
     <div className="">
-      <div class="p-2">
-      <b >ADD TASKS :</b>
+    <div className="">
+      <div class="flex p-3 text-3xl justify-center">
+      <b >ADD TASKS</b>
       </div>
-      <div className="border-2 border-black">
-      <input type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new Tasks" />
-      </div>
-      <div class="p-2">
-    <button className="border-2 border-black" onClick={addbutton}>
+      <div className="flex justify-center ">
+      <input type="text" className="rounded-lg px-6 border-2 border-neutral-900 p-1" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new Tasks" />
+    <button className="rounded-lg mx-3 px-3 border-2 border-black " onClick={addbutton}>
       ADD
     </button>
     </div>
