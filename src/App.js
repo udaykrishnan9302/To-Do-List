@@ -21,7 +21,11 @@ function App() {
     const userDoc = doc(db, "TaskCollection", id);
     await deleteDoc(userDoc);
   };
-
+  const getList = async () => {
+    const dat = await getDocs(TaskCollectionRef);
+    setCount(dat.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    console.log({ TDetails });
+  };
   useEffect(() => {
     const getList = async () => {
       const dat = await getDocs(TaskCollectionRef);
@@ -50,6 +54,7 @@ function App() {
     setCount(tskStore);
     createTask();
     setValue("");
+    getList();
   };
 
   /*DATA DISPLAYING AND DELETE BUTTON*/
